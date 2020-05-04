@@ -2,6 +2,9 @@
 	"name": "codeigniter-spark",
 	"displayName": "CodeIgniter Spark",
 	"description": "Simple Spark for Codeigniter 4",
+	"icon": "images/icon.png",
+	"publisher": "aibnuhibban",
+	"repository": "https://github.com/AIbnuHIbban/vscode-codeigniter-spark",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.44.0"
