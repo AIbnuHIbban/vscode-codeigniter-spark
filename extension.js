@@ -53,9 +53,7 @@ class User extends Migration{
 		// $this->forge->addKey('id', TRUE);
 		$this->forge->createTable('${val}');
 	}
-
-	//--------------------------------------------------------------------
-
+	
 	public function down(){
 		$this->forge->dropTable('${val}');
 	}
