@@ -1,7 +1,7 @@
 {
-	"name": "codeigniter-command",
-	"displayName": "CodeIgniter Command",
-	"description": "Full Command for Codeigniter 4",
+	"name": "codeigniter-spark",
+	"displayName": "CodeIgniter Spark",
+	"description": "Simple Spark for Codeigniter 4",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.44.0"
@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:codeigniter-command.migration"
+		"onCommand:codeigniter-spark.migration"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "codeigniter-command.migration",
-				"title": "CI4: Create Migration"
+				"command": "codeigniter-spark.migration",
+				"title": "Spark: Create Migration"
 			}
 		]
 	},

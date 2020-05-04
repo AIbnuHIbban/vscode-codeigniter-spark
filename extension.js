@@ -17,12 +17,8 @@ function leadZeroSecond(dt) {
 }
 
 function activate(context) {
-	console.log(pathwork);
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "codeigniter-command" is now active!');
 
-	let disposable = vscode.commands.registerCommand('codeigniter-command.migration', function () {
+	let disposable = vscode.commands.registerCommand('codeigniter-spark.migration', function () {
 
 		
 		vscode.window.showInputBox({
