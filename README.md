@@ -1,7 +1,30 @@
-<p align="center"><img src="https://res.cloudinary.com/aibnuhibban/image/upload/v1588670260/Github/Codeigniter%20Spark/icon_text_sbihck.png" width="400"></p>
+<p align="center"><img src="https://res.cloudinary.com/aibnuhibban/image/upload/v1588669972/Github/Codeigniter%20Spark/icon_text_civnee.svg" width="400">
+</p>
+<p align="center"><b>Run Smart Codeigniter Spark commands from within Visual Studio Code</b></p>
+
 
 ## Screenshoot
+![Main Features](https://res.cloudinary.com/aibnuhibban/image/upload/v1588781062/Github/Codeigniter%20Spark/main_screenshot_qm2dvy.png)
 
-## License
+## Features
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ - Create Controller
+ - Create Migration
+ - Create Model + with option (also create migration)
+
+
+## Upcoming Updates
+
+ - [ ] Create Model + with option (migration,controller)
+ - [ ] Create Route
+ - [ ] Run Migrate
+ - [ ] Run Migrate Rollback
+ - [ ] Run Migrate Refresh
+ - [ ] Create Seeder
+
+## Support
+**if you want support you can give me a "cup of coffee"**
+
+**[My Patreon](https://www.patreon.com/join/leenuksid)**
+
+Thanks ")
