@@ -1,4 +1,4 @@
-<p align="center"><img src="https://res.cloudinary.com/aibnuhibban/image/upload/v1588669972/Github/Codeigniter%20Spark/icon_text_civnee.svg" width="400">
+<p align="center"><img src="https://res.cloudinary.com/aibnuhibban/image/upload/v1588669972/Github/Codeigniter%20Spark/icon_text_civnee.png" width="400">
 </p>
 <p align="center"><b>Run Smart Codeigniter Spark commands from within Visual Studio Code</b></p>
 
