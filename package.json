@@ -13,7 +13,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:codeigniter-spark.migration"
+		"*"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -21,6 +21,10 @@
 			{
 				"command": "codeigniter-spark.migration",
 				"title": "Spark: Create Migration"
+			},
+			{
+				"command": "codeigniter-spark.controller",
+				"title": "Spark: Create Controller"
 			}
 		]
 	},
