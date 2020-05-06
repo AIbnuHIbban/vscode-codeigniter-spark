@@ -29,7 +29,7 @@
 			{
 				"command": "codeigniter-spark.model",
 				"title": "Spark: Create Model"
-			},
+			}
 		]
 	},
 	"scripts": {
