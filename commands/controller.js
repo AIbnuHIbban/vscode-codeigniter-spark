@@ -29,9 +29,9 @@ class ${title} extends Controller{
     
                     });
                 })
-                vscode.window.showInformationMessage('Berhasil Menambah Controller !');
+                vscode.window.showInformationMessage('Successfully added a controller !');
             }else{
-                vscode.window.showWarningMessage("Nama Sudah Ada!");
+                vscode.window.showWarningMessage("Name already exist !");
             }
         })
         
