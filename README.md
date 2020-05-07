@@ -20,6 +20,8 @@
  - [ ] Run Migrate
  - [ ] Run Migrate Rollback
  - [ ] Run Migrate Refresh
+ - [ ] Start Server
+ - [ ] Stop Server
  - [ ] Create Seeder
 
 ## Support

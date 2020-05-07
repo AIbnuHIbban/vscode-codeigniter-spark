@@ -61,10 +61,8 @@ class User extends Migration{
                 fs.writeFileSync(fd, migration_create)
                 // fs.close(fd)
                 var openPath = vscode.Uri.file(pathfile); //A request file path
-
                 vscode.workspace.openTextDocument(openPath).then(function(value) {
                     vscode.window.showTextDocument(value);
-
                 });
             })
             vscode.window.showInformationMessage('Successfully added a migration !');

@@ -9,10 +9,13 @@ module.exports = function(vscode, fs,pathwork, path){
             prompt: "Define the table name",
             placeHolder: "Table Name"
         }).then(async (table_name) =>  {
-            const answer = await vscode.window.showQuickPick(['Yes', 'No'], {
+            const answ_migration    = await vscode.window.showQuickPick(['Yes', 'No'], {
                 placeHolder: "Also create migration for this model ?",
             });
-            if (answer == "Yes") {
+            // const answ_controller   = await vscode.window.showQuickPick(['Yes', 'No'], {
+            //     placeHolder: "Also create controller for this model ?",
+            // });
+            if (answ_migration == "Yes") {
                 execute(vscode, fs, pathwork, path, model_name, table_name)
                 migration(vscode, fs, pathwork, path, table_name)
             }else{

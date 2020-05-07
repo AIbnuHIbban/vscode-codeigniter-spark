@@ -15,3 +15,7 @@ module.exports.leadZeroMinute = function (dt) {
 module.exports.leadZeroSecond = function (dt) { 
 	return (dt.getSeconds() < 10 ? '0' : '') + dt.getSeconds();
 }
+// ensure Terminal exist
+module.exports.closeTerminal = function (terminal){
+	terminal.dispose()
+}

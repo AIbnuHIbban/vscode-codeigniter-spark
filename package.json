@@ -5,7 +5,7 @@
 	"icon": "images/icon.png",
 	"publisher": "aibnuhibban",
 	"repository": "https://github.com/AIbnuHIbban/vscode-codeigniter-spark",
-	"version": "0.0.7",
+	"version": "0.0.12",
 	"engines": {
 		"vscode": "^1.44.0"
 	},
@@ -19,16 +19,40 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "codeigniter-spark.migration",
+				"command": "spark.migration",
 				"title": "Spark: Create Migration"
 			},
 			{
-				"command": "codeigniter-spark.controller",
+				"command": "spark.controller",
 				"title": "Spark: Create Controller"
 			},
 			{
-				"command": "codeigniter-spark.model",
+				"command": "spark.model",
 				"title": "Spark: Create Model"
+			},
+			{
+				"command": "spark.seeder",
+				"title": "Spark: Create Seeder"
+			},
+			{
+				"command": "spark.migrate",
+				"title": "Spark: Migrate"
+			},
+			{
+				"command": "spark.migrate.rollback",
+				"title": "Spark: Migrate Rollback"
+			},
+			{
+				"command": "spark.serve.start",
+				"title": "Spark: Start Server"
+			},
+			{
+				"command": "spark.serve.stop",
+				"title": "Spark: Stop Server"
+			},
+			{
+				"command": "spark.router",
+				"title": "Spark: Create Route"
 			}
 		]
 	},
