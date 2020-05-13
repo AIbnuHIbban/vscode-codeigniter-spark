@@ -37,6 +37,9 @@ function activate(context) {
 	let spark_stop_serve	= vscode.commands.registerCommand('spark.serve.stop', function () {
 		serve.stop(vscode)
 	})
+	let spark_restart_serve	= vscode.commands.registerCommand('spark.serve.restart', function () {
+		serve.restart(vscode)
+	})
 	let spark_seeder		= vscode.commands.registerCommand('spark.seeder', function () {
 		seeder(vscode,fs,pathwork,path)
 	})
@@ -51,6 +54,7 @@ function activate(context) {
 	context.subscriptions.push(spark_migrate_roll);
 	context.subscriptions.push(spark_start_serve);
 	context.subscriptions.push(spark_stop_serve);
+	context.subscriptions.push(spark_restart_serve);
 	context.subscriptions.push(spark_seeder);
 	context.subscriptions.push(spark_router);
 

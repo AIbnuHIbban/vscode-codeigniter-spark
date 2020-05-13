@@ -10,23 +10,25 @@
 
  - Create Controller
  - Create Migration
- - Create Model + with option (also create migration)
+ - Create Model + with option (also create migration and controller)
  - Create Seeder
  - Run Migrate
  - Run Migrate Rollback
  - Run Migrate Refresh
  - Start Server
  - Stop Server
+ - Restart Server
 
 ## Upcoming Updates
 
- - [ ] Create Model + with option (migration,controller)
+ - [x] Create Model + with option (migration,controller)
  - [x] Create Route
  - [x] Run Migrate
  - [x] Run Migrate Rollback
  - [x] Run Migrate Refresh
  - [x] Start Server
  - [x] Stop Server
+ - [x] Restart Server
  - [x] Create Seeder
 
 ## Support

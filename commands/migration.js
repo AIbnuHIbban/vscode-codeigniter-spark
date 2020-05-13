@@ -1,6 +1,6 @@
 const times         = require('./functions')
 
-module.exports = function(vscode, fs, pathwork, path, table_name = false){
+module.exports = function(vscode, fs, pathwork, path, table_name = false, show = true){
     if (table_name !== false) {
         var val = ""
         execute(vscode, fs, pathwork, path, val, table_name)
@@ -9,12 +9,12 @@ module.exports = function(vscode, fs, pathwork, path, table_name = false){
             prompt: "name of table",
             placeHolder: "name of table"
         }).then(function(val) {
-            execute(vscode, fs, pathwork, path, val)
+            execute(vscode, fs, pathwork, path, val, show)
         })
     }
 }
 
-function execute(vscode, fs, pathwork, path, val, table_name = false) {
+function execute(vscode, fs, pathwork, path, val, table_name = false, show) {
     var value
     if (table_name !== false) {
         value   = table_name
@@ -59,11 +59,12 @@ class User extends Migration{
             fs.open(pathfile, "w+", function(err, fd) {
                 if (err) throw err;
                 fs.writeFileSync(fd, migration_create)
-                // fs.close(fd)
-                var openPath = vscode.Uri.file(pathfile); //A request file path
-                vscode.workspace.openTextDocument(openPath).then(function(value) {
-                    vscode.window.showTextDocument(value);
-                });
+                if (show === true) {
+                    var openPath = vscode.Uri.file(pathfile); //A request file path
+                    vscode.workspace.openTextDocument(openPath).then(function(value) {
+                        vscode.window.showTextDocument(value);
+                    });
+                }
             })
             vscode.window.showInformationMessage('Successfully added a migration !');
         }else{

@@ -1,4 +1,5 @@
 const migration     = require('./migration')
+const controller    = require('./controller')
 
 module.exports = function(vscode, fs,pathwork, path){
     vscode.window.showInputBox({
@@ -12,20 +13,29 @@ module.exports = function(vscode, fs,pathwork, path){
             const answ_migration    = await vscode.window.showQuickPick(['Yes', 'No'], {
                 placeHolder: "Also create migration for this model ?",
             });
-            // const answ_controller   = await vscode.window.showQuickPick(['Yes', 'No'], {
-            //     placeHolder: "Also create controller for this model ?",
-            // });
+            const answ_controller   = await vscode.window.showQuickPick(['Yes', 'No'], {
+                placeHolder: "Also create controller for this model ?",
+            });
+
             if (answ_migration == "Yes") {
-                execute(vscode, fs, pathwork, path, model_name, table_name)
-                migration(vscode, fs, pathwork, path, table_name)
+                if (answ_controller == "Yes") {
+                    var show    = false
+                    controller(vscode, fs, pathwork, path, model_name)
+                }
+                execute(vscode, fs, pathwork, path, model_name, table_name, show)
+                migration(vscode, fs, pathwork, path, table_name,show)
             }else{
-                execute(vscode, fs, pathwork, path, model_name, table_name)
+                if (answ_controller == "Yes") {
+                    var show    = false
+                    controller(vscode, fs, pathwork, path, model_name)
+                }
+                execute(vscode, fs, pathwork, path, model_name, table_name, show)
             }
         })
     })
 }
 
-function execute(vscode, fs, pathwork, path, model_name, table_name) {
+function execute(vscode, fs, pathwork, path, model_name, table_name,show = true) {
     var filename	= `${model_name}.php`
     var pathfile 	= path.join(pathwork + "/app/Models/"+filename)
     
@@ -44,11 +54,12 @@ class UserModel extends Model{
             fs.open(pathfile, "w+", function(err, fd) {
                 if (err) throw err;
                 fs.writeFileSync(fd, controller_create)
-                // fs.close(fd)
-                var openPath = vscode.Uri.file(pathfile); //A request file path
-                vscode.workspace.openTextDocument(openPath).then(function(val) {
-                    vscode.window.showTextDocument(val);
-                });
+                if (show === true) {
+                    var openPath = vscode.Uri.file(pathfile);
+                    vscode.workspace.openTextDocument(openPath).then(function(val) {
+                        vscode.window.showTextDocument(val);
+                    });
+                }
             })
             vscode.window.showInformationMessage('Successfully added a model !');
         }else{
