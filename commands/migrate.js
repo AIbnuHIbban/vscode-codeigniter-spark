@@ -9,12 +9,12 @@ module.exports = async (vscode) => {
         const terminal  = vscode.window.createTerminal(`Spark Migrate #${NEXT_TERM_ID++}`);
         terminal.sendText("php spark migrate:refresh");
         vscode.window.showInformationMessage('Successfuly Refresh Migrate')
-        shell.closeTerminal(terminal)
+        setTimeout(function(){shell.closeTerminal(terminal)},12000)
     }else{
         const terminal  = vscode.window.createTerminal(`Spark Migrate #${NEXT_TERM_ID++}`);
         terminal.sendText("php spark migrate");
         vscode.window.showInformationMessage('Successfuly Migrate')
-        shell.closeTerminal(terminal)
+        setTimeout(function(){shell.closeTerminal(terminal)},12000)
     }
     
 }
