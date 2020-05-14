@@ -3,13 +3,13 @@ const times         = require('./functions')
 module.exports = function(vscode, fs, pathwork, path, table_name = false, show = true){
     if (table_name !== false) {
         var val = ""
-        execute(vscode, fs, pathwork, path, val, table_name)
+        execute(vscode, fs, pathwork, path, val, table_name, show)
     }else{
         vscode.window.showInputBox({
             prompt: "name of table",
             placeHolder: "name of table"
         }).then(function(val) {
-            execute(vscode, fs, pathwork, path, val, show)
+            execute(vscode, fs, pathwork, path, val, table_name, show)
         })
     }
 }

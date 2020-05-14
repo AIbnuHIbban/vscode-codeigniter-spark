@@ -1,5 +1,7 @@
 const migration     = require('./migration')
 const controller    = require('./controller')
+const capitalize        = require('./functions');
+
 
 module.exports = function(vscode, fs,pathwork, path){
     vscode.window.showInputBox({
@@ -36,7 +38,8 @@ module.exports = function(vscode, fs,pathwork, path){
 }
 
 function execute(vscode, fs, pathwork, path, model_name, table_name,show = true) {
-    var filename	= `${model_name}.php`
+    var class_name  = capitalize.capitalize(model_name)
+    var filename	= `${class_name}.php`
     var pathfile 	= path.join(pathwork + "/app/Models/"+filename)
     
     const controller_create = `<?php 
@@ -44,7 +47,7 @@ namespace App\\Models;
 
 use CodeIgniter\\Model;
 
-class UserModel extends Model{
+class ${class_name} extends Model{
     protected $table      = '${table_name}';
     // Uncomment below if you want add primary key
     // protected $primaryKey = 'id';
