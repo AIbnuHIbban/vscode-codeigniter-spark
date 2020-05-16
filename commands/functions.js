@@ -15,6 +15,17 @@ module.exports.leadZeroMinute = function (dt) {
 module.exports.leadZeroSecond = function (dt) { 
 	return (dt.getSeconds() < 10 ? '0' : '') + dt.getSeconds();
 }
+
+// Lead Zero Month
+module.exports.leadZeroMonth = function (dt) { 
+	return (dt.getMonth() < 10 ? '0' : '') + dt.getMonth();
+}
+
+// Lead Zero Month
+module.exports.leadZeroDate = function (dt) { 
+	return (dt.getDate() < 10 ? '0' : '') + dt.getDate();
+}
+
 // ensure Terminal exist
 module.exports.closeTerminal = function (terminal){
 	terminal.dispose()

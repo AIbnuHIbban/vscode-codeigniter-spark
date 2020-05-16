@@ -23,7 +23,7 @@ function execute(vscode, fs, pathwork, path, val, table_name = false, show) {
     }
     var date 	 	= new Date()
     var time		= times.leadZeroHours(date)+times.leadZeroMinute(date)+times.leadZeroSecond(date)
-    var format		= date.getFullYear()+"-0"+date.getMonth().toString().slice(-2)+"-0"+date.getDate().toString().slice(-2)+"-"+time
+    var format		= date.getFullYear()+"-"+times.leadZeroMonth(date)+"-"+times.leadZeroDate(date)+"-"+time
     var filename	= `${format}_${value}.php`
     var pathfile 	= path.join(pathwork + "/app/Database/Migrations/"+filename)
     const migration_create = `<?php 
