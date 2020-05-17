@@ -5,7 +5,7 @@
 	"icon": "images/icon.png",
 	"publisher": "aibnuhibban",
 	"repository": "https://github.com/AIbnuHIbban/vscode-codeigniter-spark",
-	"version": "0.0.18",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.44.0"
 	},
@@ -14,7 +14,7 @@
 	],
 	"keywords": [
 		"Codeigniter",
-		"Spakr",
+		"Spark",
 		"php"
 	  ],
 	"activationEvents": [
@@ -62,6 +62,44 @@
 			{
 				"command": "spark.router",
 				"title": "Spark: Create Route"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "spark.migration",
+				"key": "ctrl+shift+m"
+			},
+			{
+				"command": "spark.controller",
+				"key": "ctrl+shift+c"
+			},
+			{
+				"command": "spark.model",
+				"key": "ctrl+shift+alt+o"
+			},
+			{
+				"command": "spark.seeder",
+				"key": "ctrl+shift+e ctrl+shift+r"
+			},
+			{
+				"command": "spark.migrate",
+				"key": "ctrl+m"
+			},
+			{
+				"command": "spark.serve.start",
+				"key": "ctrl+shift+alt+s"
+			},
+			{
+				"command": "spark.serve.stop",
+				"key": "ctrl+shift+alt+q"
+			},
+			{
+				"command": "spark.serve.restart",
+				"key": "ctrl+shift+alt+r"
+			},
+			{
+				"command": "spark.router",
+				"key": "ctrl+shift+alt+w"
 			}
 		]
 	},

@@ -1,6 +1,5 @@
 const vscode 	= require('vscode');
 const fs	 	= require('fs')
-const os		= require('os')
 const path	 	= require('path');
 const migration	= require('./commands/migration');
 const controller= require('./commands/controller');
@@ -17,6 +16,7 @@ let pathwork = vscode.workspace.workspaceFolders[0].uri.fsPath;
 
 function activate(context) {
 
+	
 	let spark_migration 	= vscode.commands.registerCommand('spark.migration', function () {
 		migration(vscode, fs, pathwork, path)
 	});
@@ -33,13 +33,13 @@ function activate(context) {
 		rollback(vscode)
 	})
 	let spark_start_serve	= vscode.commands.registerCommand('spark.serve.start', function () {
-		serve.start(vscode,os)
+		serve.start(vscode)
 	})
 	let spark_stop_serve	= vscode.commands.registerCommand('spark.serve.stop', function () {
 		serve.stop(vscode)
 	})
 	let spark_restart_serve	= vscode.commands.registerCommand('spark.serve.restart', function () {
-		serve.restart(vscode,os)
+		serve.restart(vscode)
 	})
 	let spark_seeder		= vscode.commands.registerCommand('spark.seeder', function () {
 		seeder(vscode,fs,pathwork,path)

@@ -6,6 +6,11 @@
 ## Screenshoot
 ![Main Features](https://res.cloudinary.com/aibnuhibban/image/upload/v1588949956/Github/Codeigniter%20Spark/main_screenshot_qkautp.png)
 
+## Support OS
+
+- Linux (Tested)
+- Windows (Tested)
+
 ## Features
 
  - Create Controller
@@ -21,15 +26,8 @@
 
 ## Upcoming Updates
 
- - [x] Create Model + with option (migration,controller)
- - [x] Create Route
- - [x] Run Migrate
- - [x] Run Migrate Rollback
- - [x] Run Migrate Refresh
- - [x] Start Server
- - [x] Stop Server
- - [x] Restart Server
- - [x] Create Seeder
+ - [ ] Create Views
+ - [ ] Create New Project
 
 ## Support
 **if you want support you can give me a "cup of coffee"**
