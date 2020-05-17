@@ -36,7 +36,7 @@ function activate(context) {
 		serve.start(vscode,os)
 	})
 	let spark_stop_serve	= vscode.commands.registerCommand('spark.serve.stop', function () {
-		serve.stop(vscode,os)
+		serve.stop(vscode)
 	})
 	let spark_restart_serve	= vscode.commands.registerCommand('spark.serve.restart', function () {
 		serve.restart(vscode,os)
