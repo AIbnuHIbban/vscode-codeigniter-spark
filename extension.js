@@ -1,5 +1,6 @@
 const vscode 	= require('vscode');
 const fs	 	= require('fs')
+const os		= require('os')
 const path	 	= require('path');
 const migration	= require('./commands/migration');
 const controller= require('./commands/controller');
@@ -32,13 +33,13 @@ function activate(context) {
 		rollback(vscode)
 	})
 	let spark_start_serve	= vscode.commands.registerCommand('spark.serve.start', function () {
-		serve.start(vscode)
+		serve.start(vscode,os)
 	})
 	let spark_stop_serve	= vscode.commands.registerCommand('spark.serve.stop', function () {
-		serve.stop(vscode)
+		serve.stop(vscode,os)
 	})
 	let spark_restart_serve	= vscode.commands.registerCommand('spark.serve.restart', function () {
-		serve.restart(vscode)
+		serve.restart(vscode,os)
 	})
 	let spark_seeder		= vscode.commands.registerCommand('spark.seeder', function () {
 		seeder(vscode,fs,pathwork,path)
