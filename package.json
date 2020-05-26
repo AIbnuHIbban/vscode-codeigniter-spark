@@ -5,7 +5,7 @@
 	"icon": "images/icon.png",
 	"publisher": "aibnuhibban",
 	"repository": "https://github.com/AIbnuHIbban/vscode-codeigniter-spark",
-	"version": "0.1.2",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.44.0"
 	},
@@ -24,6 +24,10 @@
 	"contributes": {
 		"commands": [
 			{
+				"command": "spark.new.project",
+				"title": "Spark: New Project Codeigniter 4"
+			},
+			{
 				"command": "spark.migration",
 				"title": "Spark: Create Migration"
 			},
@@ -34,6 +38,10 @@
 			{
 				"command": "spark.model",
 				"title": "Spark: Create Model"
+			},
+			{
+				"command": "spark.views",
+				"title": "Spark: Create Views"
 			},
 			{
 				"command": "spark.seeder",

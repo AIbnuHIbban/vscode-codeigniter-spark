@@ -10,13 +10,13 @@ const serve		= require('./commands/serve');
 const seeder	= require('./commands/seeder');
 const seed		= require('./commands/seed');
 const router	= require('./commands/route');
-
+const project	= require('./commands/project');
+const views		= require('./commands/views');
 
 
 let pathwork = vscode.workspace.workspaceFolders[0].uri.fsPath;
 
 function activate(context) {
-
 	
 	let spark_migration 	= vscode.commands.registerCommand('spark.migration', function () {
 		migration(vscode, fs, pathwork, path)
@@ -51,6 +51,12 @@ function activate(context) {
 	let spark_router		= vscode.commands.registerCommand('spark.router', function () {
 		router(vscode,fs,pathwork,path)
 	})
+	let spark_new_project	= vscode.commands.registerCommand('spark.new.project', function () {
+		project.new(vscode,fs,pathwork,path)
+	})
+	let spark_views			= vscode.commands.registerCommand('spark.views', function () {
+		views(vscode,fs,pathwork,path)
+	})
 	
 	context.subscriptions.push(spark_migration);
 	context.subscriptions.push(spark_controller);
@@ -63,6 +69,8 @@ function activate(context) {
 	context.subscriptions.push(spark_seeder);
 	context.subscriptions.push(spark_seed);
 	context.subscriptions.push(spark_router);
+	context.subscriptions.push(spark_new_project);
+	context.subscriptions.push(spark_views);
 
 }
 exports.activate = activate;
