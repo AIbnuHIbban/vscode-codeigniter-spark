@@ -1,7 +1,7 @@
 {
 	"name": "codeigniter-spark",
 	"displayName": "CodeIgniter Spark",
-	"description": "Simple Spark for Codeigniter 4",
+	"description": "Smart Command for Codeigniter 4",
 	"icon": "images/icon.png",
 	"publisher": "aibnuhibban",
 	"repository": "https://github.com/AIbnuHIbban/vscode-codeigniter-spark",
