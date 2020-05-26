@@ -1,3 +1,5 @@
+const capitalize        = require('./functions');
+
 module.exports = function(vscode, fs,pathwork, path){
     vscode.window.showInputBox({
         prompt: "Seeder Name",
@@ -12,7 +14,7 @@ module.exports = function(vscode, fs,pathwork, path){
             const controller_create = `<?php 
 namespace App\\Database\\Seeds;
 
-class SimpleSeeder extends \\CodeIgniter\\Database\\Seeder{
+class ${capitalize.capitalize(val)} extends \\CodeIgniter\\Database\\Seeder{
     public function run(){
         $data = [
             

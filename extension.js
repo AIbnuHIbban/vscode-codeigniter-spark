@@ -8,6 +8,7 @@ const migrate	= require('./commands/migrate');
 const rollback	= require('./commands/rollback');
 const serve		= require('./commands/serve');
 const seeder	= require('./commands/seeder');
+const seed		= require('./commands/seed');
 const router	= require('./commands/route');
 
 
@@ -44,6 +45,9 @@ function activate(context) {
 	let spark_seeder		= vscode.commands.registerCommand('spark.seeder', function () {
 		seeder(vscode,fs,pathwork,path)
 	})
+	let spark_seed			= vscode.commands.registerCommand('spark.seed', function () {
+		seed(vscode, fs,pathwork, path)
+	})
 	let spark_router		= vscode.commands.registerCommand('spark.router', function () {
 		router(vscode,fs,pathwork,path)
 	})
@@ -57,6 +61,7 @@ function activate(context) {
 	context.subscriptions.push(spark_stop_serve);
 	context.subscriptions.push(spark_restart_serve);
 	context.subscriptions.push(spark_seeder);
+	context.subscriptions.push(spark_seed);
 	context.subscriptions.push(spark_router);
 
 }
