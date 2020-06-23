@@ -31,7 +31,7 @@ namespace App\\Database\\Migrations;
 
 use CodeIgniter\\Database\\Migration;
 
-class User extends Migration{
+class ${times.capitalize(table_name)} extends Migration{
     public function up(){
 
         // Uncomment below if want config
