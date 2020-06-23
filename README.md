@@ -3,6 +3,8 @@
 </p>
 <p align="center"><b>Run Smart Codeigniter Spark commands from within Visual Studio Code</b></p>
 
+## Youtube Playlist
+<a target="_blank" href="https://www.youtube.com/playlist?list=PLER2qXhuEm3XuWfI7rMNpMCS3clIlUWZX">Codeigniter Spark Playlist</a>
 
 ## Screenshoot
 <p align="center"><img src="https://res.cloudinary.com/aibnuhibban/image/upload/v1590509212/Github/Codeigniter%20Spark/Untitled_qbrt6x.jpg">
